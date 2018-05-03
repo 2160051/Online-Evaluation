@@ -1,0 +1,21 @@
+:root{
+	--color-dynamic: white;
+	--color-dynAfter: #dfdddd;
+	--button-color: #89c1fb;
+	--button-after: #fb8989;
+}
+@font-face{
+	font-family: Lib;
+	src: url('fonts/suit.TTF');
+}
+@font-face{
+    font-family: zekt;
+    src: url('fonts/zekton rg.ttf');
+}
+html{
+	background: url("images/loginBackground.png") no-repeat center center fixed; 
+	background-size: cover;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+}

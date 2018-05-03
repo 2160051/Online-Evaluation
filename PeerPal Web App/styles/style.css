@@ -13,7 +13,7 @@
     src: url('fonts/zekton rg.ttf');
 }
 html{
-	background: url("images/indexBackground.png") no-repeat center center fixed; 
+	background: url("images/indexBackground.jpg") no-repeat center center fixed; 
 	background-size: cover;
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
