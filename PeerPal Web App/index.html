@@ -2,22 +2,57 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="styles/style.css"/>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
 	<!--Navbar goes here-->
 	<div class="areYou">Login As</div>
 	<div class="parent">
 		<div class="child"><br><br>
-			<img src="styles/images/teacher.svg" alt="Teacher" width="60%"/>
-			<button type="button" onclick="alert('You will login as a Teacher')" class="loginAs">Teacher</button>
+			<img src="styles/images/teacher.svg" alt="Instructor" width="60%">
+			<button type="button" onclick="document.getElementById('login-Teacher').style.display='block'" class="loginAs">Instructor</button>
+
 		</div>
 		<div class="space"></div>
 		<div class="child"><br><br>
-			<img src="styles/images/student.svg" alt="Student" width="60%"/>
-			<button type="button" onclick="alert('You will login as a Student')" class="loginAs">Student</button>
+			<img src="styles/images/student.svg" alt="Student" width="60%">
+			<button type="button" onclick="document.getElementById('login-Student').style.display='block'" class="loginAs">Student</button>
 		</div>
 		</div>
+
+		<div id="login-Teacher" class="modal">  
+  			<form class="modal-content animate" action="/InstructorLogin.html">     
+    			<div class="imageAlign">
+      			<span onclick="document.getElementById('login-Teacher').style.display='none'" class="close" title="Close">&times;</span>
+      				<img src="styles/images/teacher.svg" alt="Instructor" width="30%">
+      				<h1>Instructor Login</h1>
+    			</div>
+    			<div class="container">
+      				<input type="text" placeholder="Enter Username" name="uname">
+      				<input type="password" placeholder="Enter Password" name="psw">        
+      				<button type="submit" class="loginButton">Login</button>
+      				<input type="checkbox" class="remember"> Remember me      
+      				<a href="#" class="forgot">Forgot Password?</a>
+    			</div>   
+  			</form> 
+  		</div>
+
+  		<div id="login-Student" class="modal">  
+  			<form class="modal-content animate" action="/StudentLogin.html">     
+    			<div class="imageAlign">
+      			<span onclick="document.getElementById('login-Student').style.display='none'" class="close" title="Close">&times;</span>
+      				<img src="styles/images/student.svg" alt="Student" width="30%">
+      				<h1>Student Login</h1>
+    			</div>
+    			<div class="container">
+      				<input type="text" placeholder="Enter Username" name="uname">
+      				<input type="password" placeholder="Enter Password" name="psw">        
+      				<button type="submit" class="loginButton">Login</button>
+      				<input type="checkbox" class="remember"> Remember me      
+      				<a href="#" class="forgot">Forgot Password?</a>
+    			</div>   
+  			</form> 
+  		</div>
 	<!--Footer goes here-->
 </body>
 </html>
