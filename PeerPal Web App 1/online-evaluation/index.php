@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="description" content="online evaluation">
-	<meta name="author" content="Blessie Gelidon">
+	<meta name="author" content="Group 2">
 	<title>PeerPal</title>
 	<link rel="stylesheet" type="text/css" href="css/main-style.css" />
 </head>
