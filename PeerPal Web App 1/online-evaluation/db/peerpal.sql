@@ -41,7 +41,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `firstname`, `lastname`) VALUES
-(1, '2166613', 'admin', 'Adrian', 'Ducao'),
+(1, '2165500', 'admin', 'Mary', 'Gelidon'),
 (2, '0000', 'admin', 'test', 'test'),
 (3, '2163054', '2163054', '2163054', '2163054');
 
