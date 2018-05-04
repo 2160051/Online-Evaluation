@@ -5,12 +5,8 @@
 	--button-after: #fb8989;
 }
 @font-face{
-	font-family: Lib;
-	src: url('fonts/suit.TTF');
-}
-@font-face{
-    font-family: zekt;
-    src: url('fonts/zekton rg.ttf');
+    font-family: Lato;
+    src: url('fonts/Lato-Light.ttf');
 }
 html{
 	background: url("images/indexBackground.jpg") no-repeat center center fixed; 
@@ -20,15 +16,16 @@ html{
   	-o-background-size: cover;
 }
 .areYou{
-  font-family: Lib, Helvetica;
-  font-size: 32px;
+  padding-top: 5%;
+  font-family: Lato, Lato-Light;
+  font-size: 42px;
   text-align: center;
 }
 .parent {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 7%;
+  padding: 5%;
 }
 .child {
   display: inline-block;
@@ -43,7 +40,7 @@ html{
   opacity: 0;
 }
 .loginAs{
-  font-family: Lib, Helvetica;
+  font-family: Lato, Lato-Light;
   font-size: 32px;
   text-align: center;
   margin-top: 5%;
