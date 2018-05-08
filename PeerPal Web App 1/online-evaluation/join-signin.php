@@ -13,8 +13,8 @@
 			<div class="header">
 				<table>
 					<tr>
-						<td>PeerPal</td>
-						<td align="right"><div id="sign-in"><a href="">Contact Us</a></div></td>
+						<td>Online Evaluation</td>
+						<!--<td align="right"><div id="sign-in"><a href="">Contact Us</a></div></td>-->
 					</tr>
 				</table>
 			</div>
@@ -40,9 +40,9 @@
       					}
       					else 
       					{
-         					echo "Your Login Name or Password is invalid";
+         					echo "<div id='tag-line'>Your Login Name or Password is invalid</div>";
          					?>
-         					<a href="join-signin.php">Try again.</a>
+         					<a href="join-signin.php" id="tag-line" style="color: red;">Try again.</a>
          					<?php
       					}
 					}
@@ -52,7 +52,7 @@
 				<form action="join-signin.php" method="post">
 					<table id="sign-in-table">
 						<tr>
-							<td><span style="font-size: 30px;">Sign In</span></td>
+							<td><span style="font-size: 30px; color: white;">Sign In</span></td>
 						</tr>
 						<tr>
 							<td><input name="Username" id="username" type="text" placeholder="Username / School I.D."></td>
@@ -61,7 +61,7 @@
 							<td><input name="Password" id="password" type="password" placeholder="Password"></td>
 						</tr>
 						<tr>
-							<td><a style=" text-decoration: none; color: #000000; font-size: 12px;" href="register.php">Register a new account here.</a></td>
+							<td><a style=" text-decoration: none; color: red; font-size: 18px;" href="register.php">Register a new account here.</a></td>
 						</tr>
 						<tr>
 							<td></td>

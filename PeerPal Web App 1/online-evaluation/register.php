@@ -13,8 +13,8 @@
 			<div class="header">
 				<table>
 					<tr>
-						<td>PeerPal</td>
-						<td align="right"><div id="sign-in"><a href="">Contact Us</a></div></td>
+						<td>Online Evaluation</td>
+						<!--<td align="right"><div id="sign-in"><a href="">Contact Us</a></div></td>-->
 					</tr>
 				</table>
 			</div>

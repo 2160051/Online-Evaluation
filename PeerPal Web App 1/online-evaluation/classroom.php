@@ -13,7 +13,7 @@
 			<div class="header">
 				<table>
 					<tr>
-						<td><b>PeerPal</b> <i style=" font-size: 20px;">classroom</i></td>
+						<td><b>Online Evaluation</b> <i style=" font-size: 20px;">classroom</i></td>
 						<td align="right"><a id="add" title="Press to Create or Add class" href="">+</a></td>
 						<td align="right" title="You"><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']; ?></td>
 						<td align="right"><div title="Please don't go" id="sign-in"><a href="signout.php">Sign Out</a></div></td>
