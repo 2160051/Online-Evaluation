@@ -1,0 +1,32 @@
+#sortable, #sortable1 {
+list-style-type: none;
+margin: 0;
+padding: 0;
+width: 60%;
+}
+.btn-success {
+margin: 9px !important;
+}
+li {
+list-style-type: none;
+}
+#sortable li, #sortable1 div {
+margin: 0 3px 3px 3px;
+padding: 0.4em;
+padding-left: 1.5em;
+font-size: 1.4em;
+width: 146px;
+}
+#sortable li span, #sortable1 div {
+position: absolute;
+margin-left: -1.3em;
+}
+#droppable {
+width: 399px;
+height: 500px;
+padding: 0.5em;
+position: absolute;
+left: 30%;
+top: 7%;
+margin: 10px;
+}

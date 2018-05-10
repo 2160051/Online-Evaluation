@@ -1,0 +1,114 @@
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="try.css">
+    <script src="jquery-1.12.4.js"></script>
+    <script src="jquery-ui.js"></script>
+    <style>
+    
+    </style>
+    <script>
+    $(function () {
+    $("#sortable").sortable();
+    $("#sortable").disableSelection();
+    $("#sortable1").sortable();
+    $("#sortable1").disableSelection();
+    $(".sortTxtbox").sortable();
+    $(".sortTxtbox").disableSelection();
+    });
+    function getNewId(type) {
+    var newId;
+    if (type == "textbox")
+    newId = $('#droppable').find(':text').length
+    if (type == "chekbox")
+    newId = $('#droppable').find(':checkbox').length
+    if (type == "dropdown")
+    newId = $('#droppable').find('select').length
+    if (type == "button")
+    newId = $('#droppable').find(':button').length
+    if (type == "label")
+    newId = $('#droppable').find('label').length
+    return type + (newId + 1);
+    }
+    $(function () {
+    $(".draggable").draggable();
+    $("#droppable").droppable({
+    drop: function (event, ui) {
+    var draggableId = ui.draggable.attr("id");
+    var newid = getNewId(draggableId);
+    var start = "<form>";
+    var end = "</form>";
+    if (draggableId == "textbox") {
+    $(this).append('<li><div class="col-xs-6 input-group">' +
+      ' <span class="input-group-addon"><i class="icon-edit"></i></span>' +
+      '<input id="' + newid + '" type="text" class="form-control" name="email">' +
+    '</div></li>')
+    }
+    else if (draggableId == "chekbox") {
+    $(this).append('<li><label><input  onclick="EditLabel(this);" type="checkbox" value="">newid</label></li>')
+    }
+    else if (draggableId == "radio") {
+    $(this).append('<li><label><input  id="' + newid + '" type="radio" value="">newid<li><label>')
+    }else if (draggableId == "radio") {
+    $(this).append('<li><select   id="' + newid + '"   >' +
+      '<option value="volvo">Volvo</option>' +
+      '<option value="saab">Saab</option>' +
+      '<option value="fiat">Fiat</option>' +
+      ' <option value="audi">Audi</option>' +
+    ' </select></li>')
+    }
+    else if (draggableId == "button") {
+    $(this).append('<button type="button" class="btn btn-labeled btn-success">' +
+    '<span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>' + "Submit" +
+    '</button>')
+    }
+    else if (draggableId == "label") {
+    $(this).append('<li><label id="' + newid + '" onclick="EditLabel(this);" class="editable">Label</label></li>')
+    }
+    }
+    });
+    });
+    function EditLabel(obj) {
+    
+    var label = $(obj);
+    debugger
+    label.after("<input type = 'text' style = 'display:none' />");
+    //Reference the TextBox.
+    var textbox = $(obj).next();
+    //Set the name attribute of the TextBox.
+    var id = obj.id.split('_')[obj.id.split('_').length - 1];
+    textbox[0].name = id.replace("lbl", "txt");
+    //Assign the value of Label to TextBox.
+    textbox.val(label.html());
+    //When Label is clicked, hide Label and show TextBox.
+    label.click(function () {
+    $(this).hide();
+    $(this).next().show();
+    });
+    //When focus is lost from TextBox, hide TextBox and show Label.
+    textbox.focusout(function () {
+    $(this).hide();
+    $(this).prev().html($(this).val());
+    $(this).prev().show();
+    });
+    }
+    </script>
+  </head>
+  <body>
+    <form class="">
+      <ul id="sortable">
+        <li class="ui-state-default" id="textbox"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Textbox</li>
+        <li class="ui-state-default" id="chekbox"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>CheckBox</li>
+        <li class="ui-state-default" id="dropdown"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Dropdown</li>
+        <li class="ui-state-default" id="label"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>label</li>
+        <li class="ui-state-default" id="button"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Button</li>
+        <li class="ui-state-default" id="radio"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Radio</li>
+      </ul>
+      <div id="droppable" class="ui-widget-header sortTxtbox">
+        <p>Drop here</p>
+        
+      </div>
+    </form>
+  </body>
+</html>
