@@ -1,0 +1,46 @@
+
+#formBuild {
+	width: 399px;
+	height: 500px;
+	padding: 0.5em;
+	position: absolute;
+	left: 30%;
+	top: 7%;
+	margin: 10px;
+	background-color: #efefef;
+}
+#submitButton{
+	position: relative;
+	border-radius: 5px;
+	background-color: #f06060;
+	left: 20%;
+	color: white;
+	width: 70px;
+	height: 40px;
+	font-family: Calibri;
+	font-size: 18px;
+	text-align: center;
+}
+#submitButton:hover{
+	background-color: #5bd961;
+	cursor: pointer;
+}
+#labelValue{
+	width: 25%;
+	margin-bottom: 20px;
+}
+#labelValue:hover{
+	border-color: green;
+	cursor: pointer;
+}
+#dropDown{
+	left: 20%;
+	margin-bottom: 20px;
+}
+#dropDown:hover{
+	cursor: pointer;
+}
+.likert li {
+  float: left;
+  list-style-type: none;
+}
