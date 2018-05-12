@@ -1,0 +1,71 @@
+:root{
+	--color-font: #b6e5ff;
+	--bg-color: #efefefef;
+	--button-color: #7289da;
+}
+@font-face{
+	font-family: Lato;
+	src: url('fonts/Lato-Medium');
+}
+@font-face{
+    font-family: Lato;
+    src: url('fonts/Lato-Thin.ttf');
+}
+html{
+	background-color: #7289da;
+}
+a{
+	text-decoration:none; 
+	color:white;
+}
+.quiz{
+	margin: auto;
+	font-family: Lato, Lato-Thin;
+	font-size: 32px;
+}
+#wrapper {	
+	background-color: var(--color-font);
+	width: 750px;
+	height: auto;
+	padding: 13px;
+	margin: auto;
+}
+.submitButton{
+	position: relative;
+	display: inline-block;
+	left: 65%;
+	border-radius: 5px;
+	background-color: var(--button-color);
+	color: white;
+	width: 120px;
+	height: 70px;
+	font-family: Lato, Lato-Thin;
+	font-size: 24px;
+}
+.submitButton:hover{
+	background-color: #5bd961;
+	cursor: pointer;
+}
+.continueButton{
+	position: relative;
+	left: 70%;
+	border-radius: 5px;
+	background-color: var(--button-color);
+	color: white;
+	width: 200px;
+	height: 70px;
+	font-family: Lato, Lato-Thin;
+	font-size: 24px;
+	padding: 10px;
+}
+.continueButton:hover{
+	background-color: #5bd961;
+	cursor: pointer;
+}
+#score{
+	font-family: Lato, Lato-Thin;
+	font-size: 32px;
+}
+#radioAlign{
+	display: inline-block;
+}
