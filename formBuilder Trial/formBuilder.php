@@ -11,47 +11,36 @@
         $url = 'form.json'; 
         $data = file_get_contents($url); 
         $formCriteria = json_decode($data, true);
-	   
-        echo "<form action='formProcessor.php?id=1' method='post' id='quizForm' id='1' class='quiz'> 
+	   	
+        if(filesize("form.json") == 0){
+        	echo '<h3 class="quiz" style="text-align:center;">There is something wrong with your form</h3>
+        		  <button class="submitButton" onclick="formBuilder.php">Go Back</button>';
+        }else{
+        	echo "<form action='formProcessor.php?id=1' method='post' id='quizForm' id='1' class='quiz'> 
                 <ol>";      
+        	foreach ($formCriteria as $formCriterias) {
+            	if($formCriterias != null || $formCriterias != undefined){
+            	echo '<li style="text-align:center;">
+                    <h3>'. $formCriterias['criteria']. '</h3>';
+                
+            	$choice = '';
+            	$length = count($formCriterias['choices']);
+            	for($ctr = 0; $ctr < $length; $ctr++){
+            		$choice .= '<div id="radioAlign">';
+            		$choice .= '<input type="radio" name='.$formCriterias['choices'][$ctr].' id='.$formCriterias['choices'][$ctr].' value='.$formCriterias['choices'][$ctr].' />';
+            		$choice .= '<label for='.$formCriterias['choices'][$ctr].' style="margin: 1em;">'. $formCriterias['choices'][$ctr]. '</label></div>';
+            	}
 
-        foreach ($formCriteria as $formCriterias) {
-            if($formCriterias != null || $formCriterias != undefined){
-            echo '<li style="text-align:center;">
-                    <h3>'. $formCriterias['criteria']. '</h3> 
-                    <div id="radioAlign">
-                        <input type="radio" name='.$counter.' id='.$counter.' value="a" />
-                        <label for="answerOneA">'. $formCriterias['choices'][0]. '</label>
-                    </div>
-        
-                    <div id="radioAlign">
-                        <input type="radio" name='.$counter.' id='.$counter.' value="b" />
-                        <label for="answerOneB">'. $formCriterias['choices'][1]. '</label>
-                    </div>
-        
-                    <div id="radioAlign">
-                        <input type="radio" name='.$counter.' id='.$counter.' value="c" />
-                        <label for="answerOneC">'. $formCriterias['choices'][2]. '</label>
-                    </div>
-
-                    <div id="radioAlign">
-                        <input type="radio" name='.$counter.' id='.$counter.' value="d" />
-                        <label for="answerOneD">'. $formCriterias['choices'][3].'</label>
-                    </div>
-                </li>';
+            	echo $choice;
                 $counter++;
-        }
-    }
-        echo "</ol>
-                <button class='submitButton' onclick='goBack()'>Go Back</button>
-                <input type='submit' value='Submit' class='submitButton' />
-             </form>";
+        	}
+    	}
+        	echo '</ol>
+                <button class="submitButton" formaction="formBuilder.php">Go Back</button>
+                <input type="submit" value="Submit" class="submitButton" />
+             </form>';
+        }        
 ?>
 </div>
-<script>
-function goBack() {
-    window.history.back();
-}
-</script>
 </body>
 </html>
