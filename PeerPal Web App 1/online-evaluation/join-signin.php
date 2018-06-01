@@ -2,33 +2,33 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="online evaluation">
-	<meta name="author" content="Blessie Gelidon">
 	<title>Sign In</title>
-	<link rel="stylesheet" type="text/css" href="css/main-style.css" />
+	<link rel="stylesheet" type="text/css" href="css/rstyle.css" />
 </head>
 <body>
-	<center>
-		<div class="wrapper">
-			<div class="header">
-				<table>
-					<tr>
-						<td>Online Evaluation</td>
-						<!--<td align="right"><div id="sign-in"><a href="">Contact Us</a></div></td>-->
-					</tr>
-				</table>
-			</div>
-			<div class="body">
-				<?php
-					if(!empty($_POST['Username']) && !empty($_POST['Password']))
+    <center>
+        <div class="wrapper">
+            <div class="form_wrapper">
+            <div class="form_container">
+                <div class="title_container">
+                    <h2>Log In</h2>
+                </div>
+                <div class="row clearfix">
+                    <div class="">
+                        <?php
+					if(!empty($_POST['username']) && !empty($_POST['password']))
 					{
-						$user = mysqli_real_escape_string($conn, $_POST['Username']);
-						$pass = mysqli_real_escape_string($conn, $_POST['Password']);
+						$user = mysqli_real_escape_string($conn, $_POST['username']);
+						$pass = mysqli_real_escape_string($conn, $_POST['password']);
+                        
 
-						$query = mysqli_query($conn, "SELECT *FROM `users` WHERE username = '$user' and password = '$pass'");
+						$query = mysqli_query($conn, "SELECT *FROM `users` WHERE username = '$user' and password = '$pass' and identification = 'student'");
      		 			$row = mysqli_fetch_array($query,MYSQLI_ASSOC);      
       					$count = mysqli_num_rows($query);
-      
+                        
+                        $Tquery = mysqli_query($conn, "SELECT *FROM `users` WHERE username = '$user' and password = '$pass' and identification = 'teacher'");
+     		 			$Trow = mysqli_fetch_array($Tquery,MYSQLI_ASSOC);      
+      					$Tcount = mysqli_num_rows($Tquery);
      			
       					if($count == 1) 
       					{
@@ -38,44 +38,47 @@
         	 
          					header("location: classroom.php");
       					}
+                        
+      					if($Tcount == 1) 
+      					{
+         					$_SESSION['username'] = $user;
+         					$_SESSION['firstname'] = $row['firstname'];
+         					$_SESSION['lastname'] = $row['lastname'];
+        	 
+         					//wala pang redirection sa teacher page..
+                            header("location: teacherpage.php"); 
+                            
+      					}
       					else 
       					{
          					echo "<div id='tag-line'>Your Login Name or Password is invalid</div>";
          					?>
          					<a href="join-signin.php" id="tag-line" style="color: red;">Try again.</a>
-         					<?php
+         					<?php 
       					}
 					}
 					else
 					{
 				?>
-				<form action="join-signin.php" method="post">
-					<table id="sign-in-table">
-						<tr>
-							<td><span style="font-size: 30px; color: white;">Sign In</span></td>
-						</tr>
-						<tr>
-							<td><input name="Username" id="username" type="text" placeholder="Username / School I.D."></td>
-						</tr>
-						<tr>
-							<td><input name="Password" id="password" type="password" placeholder="Password"></td>
-						</tr>
-						<tr>
-							<td><a style=" text-decoration: none; color: red; font-size: 18px;" href="register.php">Register a new account here.</a></td>
-						</tr>
-						<tr>
-							<td></td>
-						</tr>
-						<tr>
-							<td><input id="submit" type="submit" value="Sign In"></td>
-						</tr>
-					</table>
-				</form>
-				<?php
+                                <form action="join-signin.php" method="post">
+                                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                                        <input type="username" name="username" placeholder="Username or ID Number" required />
+                                    </div>
+                                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                                        <input type="password" name="password" placeholder="Password" required />
+                                    </div>
+                                    
+                                    <input class="button" type="submit" value="Log-in" />
+                                    <a href="register.php">Don't have an account yet? Register now!</a>
+                                </form>
+                    </div>
+                </div>
+            </div>
+            <?php
 					}
 				?>
-			</div>
-		</div>
-	</center>
+        </div>
+        </div>
+    </center>
 </body>
 </html>
