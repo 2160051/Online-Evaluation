@@ -1,11 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  font-weight: 100;
+  overflow: hidden;
+}
 body {
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 14px;
-  background: #f2f2f2;
-    background: url("../images/indexBackground.png") no-repeat center center fixed; 
-    background-size: cover;
+  background: #4682B4;
+    font-family: Roboto;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  text-align: center;
+  top: ;
+  color: #fff;
+  background-color: #4682B4;
+  }
+
+h1 {
+  font-size: 7vw;
+    font-family: Roboto;
+}
 
 
 .clearfix:after {
@@ -22,10 +46,10 @@ body {
   max-width: 100%;
   box-sizing: border-box;
   padding: 25px;
-  margin: 8% auto 0;
+  margin: 1% auto 0;
   position: relative;
   z-index: 1;
-  border-top: 5px solid #f5ba1a;
+  border-top: 5px solid #FFDEAD;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -106,14 +130,14 @@ body {
   background: #fafafa;
 }
 .form_wrapper input[type="text"]:focus, .form_wrapper input[type="username"]:focus, .form_wrapper input[type="password"]:focus {
-  -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
-  -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
-  box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
+  -webkit-box-shadow: 0 0 2px 1px rgba(192,192,192,0.3);
+  -moz-box-shadow: 0 0 2px 1px rgba(192,192,192,0.3);
+  box-shadow: 0 0 2px 1px rgba(192,192,192,0.3);
   border: 1px solid #f5ba1a;
   background: #fafafa;
 }
 .form_wrapper input[type="submit"] {
-  background: #f5ba1a;
+  background: #FFDEAD;
   height: 35px;
   line-height: 35px;
   width: 100%;
@@ -134,7 +158,7 @@ body {
 .form_wrapper input[type="submit"]:focus {
   background: #e1a70a;
 }
-.form_wrapper input[type="checkbox"], .form_wrapper input[type="radio"] {
+.form_wrapper input[type="radio"] {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -147,52 +171,6 @@ body {
 
 .form_container .row .col_half.last {
   border-left: 1px solid #cccccc;
-}
-
-.checkbox_option label {
-  margin-right: 1em;
-  position: relative;
-}
-.checkbox_option label:before {
-  content: "";
-  display: inline-block;
-  width: 0.5em;
-  height: 0.5em;
-  margin-right: 0.5em;
-  vertical-align: -2px;
-  border: 2px solid #cccccc;
-  padding: 0.12em;
-  background-color: transparent;
-  background-clip: content-box;
-  transition: all 0.2s ease;
-}
-.checkbox_option label:after {
-  border-right: 2px solid #000000;
-  border-top: 2px solid #000000;
-  content: "";
-  height: 20px;
-  left: 2px;
-  position: absolute;
-  top: 7px;
-  transform: scaleX(-1) rotate(135deg);
-  transform-origin: left top;
-  width: 7px;
-  display: none;
-}
-.checkbox_option input:hover + label:before {
-  border-color: #000000;
-}
-.checkbox_option input:checked + label:before {
-  border-color: #000000;
-}
-.checkbox_option input:checked + label:after {
-  -moz-animation: check 0.8s ease 0s running;
-  -webkit-animation: check 0.8s ease 0s running;
-  animation: check 0.8s ease 0s running;
-  display: block;
-  width: 7px;
-  height: 20px;
-  border-color: #000000;
 }
 
 .radio_option label {
