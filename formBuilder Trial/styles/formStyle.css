@@ -1,28 +1,34 @@
+/*selectors*/
 :root{
 	--color-font: #b6e5ff;
 	--bg-color: #efefefef;
 	--button-color: #7289da;
 }
+
 @font-face{
 	font-family: Lato;
 	src: url('fonts/Lato-Medium');
 }
+
 @font-face{
     font-family: Lato;
     src: url('fonts/Lato-Thin.ttf');
 }
+
 html{
 	background-color: #7289da;
 }
+
 a{
 	text-decoration:none; 
 	color:white;
 }
-.quiz{
-	margin: auto;
-	font-family: Lato, Lato-Thin;
-	font-size: 32px;
+
+input[type="file"] {
+  display: none !important;
 }
+
+/*id*/
 #wrapper {	
 	background-color: var(--color-font);
 	width: 750px;
@@ -30,6 +36,39 @@ a{
 	padding: 13px;
 	margin: auto;
 }
+
+#uploadContainer {	
+	background-color: var(--color-font);
+	width: 750px;
+	height: auto;
+	padding: 13px;
+	margin: auto;
+	margin-top: 200px;
+}
+
+#score{
+	font-family: Lato, Lato-Thin;
+	font-size: 32px;
+}
+
+#radioAlign{
+	display: inline-block;
+}
+
+#classCode{
+	font-family: Lato, Lato-Thin;
+	font-size: 32px;
+	margin-bottom: 50px;
+	margin-left: 30px;
+}
+
+/*class*/
+.quiz{
+	margin: auto;
+	font-family: Lato, Lato-Thin;
+	font-size: 32px;
+}
+
 .submitButton{
 	position: relative;
 	display: inline-block;
@@ -42,10 +81,28 @@ a{
 	font-family: Lato, Lato-Thin;
 	font-size: 24px;
 }
+
 .submitButton:hover{
 	background-color: #5bd961;
 	cursor: pointer;
 }
+
+.uploadButton{
+	border-radius: 5px;
+	background-color: var(--button-color);
+	color: white;
+	width: 120px;
+	height: 70px;
+	font-family: Lato, Lato-Thin;
+	font-size: 24px;
+	margin-left: 230px;
+}
+
+.uploadButton:hover{
+	background-color: #5bd961;
+	cursor: pointer;
+}
+
 .continueButton{
 	position: relative;
 	left: 70%;
@@ -58,14 +115,29 @@ a{
 	font-size: 24px;
 	padding: 10px;
 }
+
 .continueButton:hover{
 	background-color: #5bd961;
 	cursor: pointer;
 }
-#score{
-	font-family: Lato, Lato-Thin;
-	font-size: 32px;
+
+.btn {
+ 	font-family: Lato, Lato-Thin;
+  	color: #ffffff;
+  	border-radius: 5px;
+  	font-size: 24px;
+  	background-color: var(--button-color);
+  	padding: 10px 20px 10px 20px;
+  	text-decoration: none;
+  	margin-left: 230px;
 }
-#radioAlign{
-	display: inline-block;
+
+.btn:hover{
+	background-color: #5bd961;
+	cursor: pointer;
+}
+
+.file-name {
+ 	font-family: Lato, Lato-Thin;
+ 	font-size: 20px;
 }
