@@ -11,40 +11,29 @@
 
 <body>
 <div class="offcanvas">
+    <?php
+      
+    ?>
   <div class="offcanvas__container"><a class="offcanvas__exit-overlay" href="#" data-toggle="offcanvas" data-target="exit"></a>
-    <nav class="navbar navbar-default">
+    <nav class="navbar bg-info">
       <div class="container-fluid">
         <div class="navbar-header navbar-header--double-btn">
           <button class="navbar-toggle navbar-toggle--left" type="button" data-toggle="offcanvas" data-target="left" aria-expanded="false"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand navbar-brand--center" href="#">Online Evaluation</a>
         </div>
         <div class="navbar-offcanvas offcanvas__content offcanvas__content--left">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
+            <li class="active"><a href="teacherpage.php"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
             <li class=""><a href="#"><span class="glyphicon glyphicon-plus"></span>&nbsp;Add a Class</a></li>
           </ul>
+            <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Welcome <?php echo $_SESSION['firstname']. " ". $_SESSION['lastname'];?></a></li>
+      <li><a href="signout.php"><span class="glyphicon glyphicon-log-out"></span> Log-out</a></li>
+    </ul>
         </div>
       </div>
     </nav>
-      
-    <div class="container">
-        <div class="page"
-        <div class="col-sm-2">
-            <h1>&nbsp; <?php               
-                $user = mysqli_real_escape_string($conn, $_SESSION['username']);
-                
-                $sql = "select * from user_course join users using(id) join course using(courseCode) where users.username =  '$user'";
-                    $result = mysqli_query($conn, $sql);
-
-                    if (mysqli_num_rows($result) > 0) {
-                        // output data of each row
-                        while($row = mysqli_fetch_assoc($result)) {
-                            echo "<div>" .$row["courseCode"].  "<br>" . $row["courseName"]. "<br> <br>";
-                        }
-                    } else {
-                        echo "0 results";
-                }
-                ?></h1>
-        </div>
+    <div class="page-header">
+        <button class="btn btn-primary btn-lg btn-block">Add an Evaluation &nbsp; <span class="glyphicon glyphicon-plus"></span></button>
     </div>
   </div>
 </div>

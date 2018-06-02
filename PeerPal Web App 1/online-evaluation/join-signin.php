@@ -46,10 +46,8 @@
       					if($Tcount == 1) 
       					{
          					$_SESSION['username'] = $user;
-         					$_SESSION['firstname'] = $row['firstname'];
-         					$_SESSION['lastname'] = $row['lastname'];
-        	 
-         					//wala pang redirection sa teacher page..
+         					$_SESSION['firstname'] = $Trow['firstname'];
+         					$_SESSION['lastname'] = $Trow['lastname'];
                             header("location: teacherpage.php"); 
                             
       					}
