@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>SLU Peer Evaluation | About</title>
+        <link rel="stylesheet" href="css/astyle.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="icon" href="css/images/slogo.png">
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    </head>
+    
+    <body>
+        
+        <nav class="notransition">
+                    <div class="menu-icon">
+                        <i class="fa fa-bars fa-2x"></i>
+                    </div>
+                    <div class="logo">SLU Peer Evaluation</div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="register.php">Sign Up</a></li>
+                            <li><a href="join-signin.php">Log In</a></li>
+							<li><a class="active" href="about.html">About</a></li>
+                        </ul>
+                    </div>
+        </nav>
+        
+        <script type="text/javascript">
+        
+        $(function() {
+           var welcomeSection = $('.welcome-section'),
+               enterButton = welcomeSection.find('.enter-button');
+            
+            setTimeout(function() {
+                welcomeSection.removeClass('content-hidden');
+            },800);
+            
+            enterButton.on('click', function(e){
+               e.preventDefault();
+                welcomeSection.addClass('content-hidden').fadeOut();
+            });
+        });
+            
+        </script>
+        
+        <script type="text/javascript">
+        
+        $(document).ready(function(){
+            $(".menu-icon").on("click", function(){
+                $("nav ul").toggleClass("showing");
+            });
+        });
+            
+        $(window).on("scroll", function(){
+            if($(window).scrollTop()) {
+                $('nav').addClass('black');
+            } else {
+                $('nav').removeClass('black');
+            }
+        })    
+            
+        </script>
+    </body>
+</html>
