@@ -1,34 +1,41 @@
-<?php include('connection.php');?>
-<html>
+<!DOCTYPE html>
+<html lang="en" >
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="description" content="online evaluation">
-	<meta name="author" content="Group 2">
-	<title>Online Evaluation</title>
-	<link rel="stylesheet" type="text/css" href="css/main-style.css" />
+  <meta charset="UTF-8">
+  <title>Welcome Page w/ Video</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/main-style.css">
+
+  
 </head>
+
 <body>
-	<center>
-		<div class="wrapper">
-			<div class="header">
-				<table>
-					<tr>
-						<td>Online Evaluation</td>
-						<!--<td align="right"><div id="sign-in"><a href="">Contact Us</a></div></td>-->
-					</tr>
-				</table>
-			</div>
-			<div class="body">
-				<table id="b-table">
-					<tr>
-						<td><span id="tag-line">Create your own learning experience with PeerPal</span></td>
-					</tr>
-					<tr>
-						<td align="center"><div id="sign-inn"><a href="join-signin.php">Join Now / Sign In</a></div></td>
-					</tr>
-				</table>
-			</div>
-		</div>
-	</center>
+
+  <html>
+  
+  <head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
+  </head>
+  
+  <body>
+    
+    <div class="content">
+      <h1>Online Evaluation</h1>
+      <h2>..........</h2>
+      <br />
+     <a href="join-signin.php" class="btn paper paper-raise-flatten">Let's Get Started</a>
+    </div>
+    
+  </body>
+  
+</html>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+  
+
 </body>
+
 </html>
