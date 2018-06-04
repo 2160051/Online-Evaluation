@@ -40,7 +40,7 @@
          					$_SESSION['firstname'] = $row['firstname'];
          					$_SESSION['lastname'] = $row['lastname'];
         	 
-         					header("location: classroom.php");
+         					header("location: classroomF.php");
       					}
                         
       					if($Tcount == 1) 
