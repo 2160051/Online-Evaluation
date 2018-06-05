@@ -7,7 +7,6 @@
   padding: 0;
   font-family: 'Quicksand', sans-serif;
   font-weight: 100;
-  overflow: hidden;
 }
 body {
   font-family: 'Quicksand', sans-serif;
@@ -517,4 +516,4 @@ nav ul li a:hover {
   -o-transition: none !important; 
   -ms-transition: none !important; 
   transition: none !important; 
-} 
+}

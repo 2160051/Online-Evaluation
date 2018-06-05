@@ -7,12 +7,11 @@
   padding: 0;
   font-family: 'Quicksand', sans-serif;
   font-weight: 100;
-  overflow: hidden;
 }
 body {
   font-family: 'Quicksand', sans-serif;
   font-size: 18px;
-  background: #849BB3;
+  background: #FFFFFF;
 }
 
 /* Nav Bar */
@@ -23,7 +22,7 @@ body {
     font-family: 'Quicksand', sans-serif;
     line-height: 30px;
     text-align: justify;
-    color: black;
+    color: #344B63;
 }
 
 .logo {
@@ -34,6 +33,17 @@ body {
     font-weight: bold;
     font-size: 24px;
     font-family: 'Quicksand', sans-serif;
+}
+
+.contents {
+    width: 90%;
+    margin: 4em auto;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 30px;
+    text-align: justify;
+    color: #FFFFFF;
+	padding-top: 80px;
 }
 
 nav {
@@ -53,7 +63,7 @@ nav ul {
 }
 
 nav.black ul {
-    background: #2A2728;
+    background: RGBA(92,115,139, 0.8);
 }
 
 nav ul li {
@@ -123,4 +133,74 @@ nav ul li a:hover {
   -o-transition: none !important; 
   -ms-transition: none !important; 
   transition: none !important; 
-} 
+}
+.textTitle{
+	font-size: 28px;
+}
+#text{
+	width: 100%;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 65px;
+}
+
+.pics{
+	height: 520px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.pics img{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#users{
+	height: 450px;
+	width: 450px;
+	position: relative;
+	top: 50px;
+}
+#evaluate{
+	height: 140px;
+	width: 140px;
+	position: relative;
+	top: -100px;
+	left: 20px;
+	transform: rotate(20deg);
+}
+#a{
+	height: 180px;
+	width: 180px;
+	position: relative;
+	top: -550px;
+	left: 280px;
+}
+#b{
+	height: 120px;
+	width: 180px;
+	position: relative;
+	top: -650px;
+	left: -260px;
+}
+.words{
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+    color: #344B63;
+}
+.subwords{
+    font-size: 24px;
+    font-family: 'Quicksand', sans-serif;
+    color: #344B63;
+	position: relative;
+	top: -50px;
+}
+.contents {
+    width: 90%;
+    margin: auto;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    color: #344B63;
+}

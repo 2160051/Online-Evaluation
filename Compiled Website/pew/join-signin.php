@@ -13,7 +13,8 @@
                     <div class="menu-icon">
                         <i class="fa fa-bars fa-2x"></i>
                     </div>
-                    <div class="logo">SLU Peer Evaluation</div>
+					<img src="css/images/slogo.png" style="height: 45px; width: 36px; position: fixed; top: 10px; left: 10px; filter: blur(0.2px);">
+                    <div class="logo">&emsp;SLU Peer Evaluation</div>
                     <div class="menu">
                         <ul>
                             <li><a href="index.html">Home</a></li>
@@ -26,7 +27,7 @@
         <div class="header">
         </div>
         <div class="wrapper">
-            <div class="form_wrapper">
+            <div class="form_wrapper" style="position: relative; top: -60px; margin: auto;">
             <div class="form_container">
                 <div class="title_container">
                     <h2>Log In</h2>

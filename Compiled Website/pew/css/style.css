@@ -91,7 +91,8 @@ body {
     font-family: 'Anonymous Pro', monospace;
     text-align: center;
     white-space: nowrap;
-    overflow: hidden;transform: translateY(-50%);
+    overflow: hidden;
+	transform: translateY(-50%);
 }
 
 /* Typewriter animation */
@@ -164,7 +165,7 @@ nav ul {
 }
 
 nav.black ul {
-    background: #5C738B;
+    background: RGBA(92,115,139, 0.8);
 }
 
 nav ul li {
@@ -229,4 +230,94 @@ nav ul li a:hover {
 }
 .textTitle{
 	font-size: 28px;
+}
+.contents {
+    width: 90%;
+    margin: 4em auto;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 30px;
+    color: #344B63;
+}
+
+.pics{
+	height: 260px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.pics img{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.middle{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#calendar{
+	height: 120px; 
+	width: 120px; 
+	position: relative;
+	left: -300px;
+}
+
+#pencil{
+	height: 115px; 
+	width: 115px; 
+	position: relative;
+	top: -115px;
+}
+
+#date{
+	height: 120px; 
+	width: 120px; 
+	position: relative;
+	opacity: 0.9;
+	top: -230px;
+	left: 290px;
+}
+#squareOne{
+	height: 110px; 
+	width: 280px; 
+	position: relative;
+	text-align: center;
+	top: -280px;
+	z-index: -1;
+}
+#squareOne p{
+	padding-top: 60px;
+	font-size: 32px;
+	color: #344B63;
+}
+#squareTwo{
+	height: 110px; 
+	width: 280px; 
+	position: relative;
+	text-align: center;
+	top: -390px;
+	left: -300px;
+	z-index: -1;
+}
+#squareTwo p{
+	padding-top: 60px;
+	font-size: 32px;
+	color: #344B63;
+}
+#squareThree{
+	height: 110px; 
+	width: 280px; 
+	position: relative;
+	text-align: center;
+	top: -500px;
+	left: 298px;
+	z-index: -1;
+}
+#squareThree p{
+	padding-top: 60px;
+	font-size: 32px;
+	color: #344B63;
 }
