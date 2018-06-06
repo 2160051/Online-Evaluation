@@ -27,7 +27,7 @@
     </nav>
       
     <div class="container">
-        <div class="page"
+        <div class="page">
         <div class="col-sm-2">
             <h1>&nbsp; <?php               
                 $user = mysqli_real_escape_string($conn, $_SESSION['username']);
@@ -44,6 +44,7 @@
                         echo "0 results";
                 }
                 ?></h1>
+            </div>
         </div>
     </div>
   </div>

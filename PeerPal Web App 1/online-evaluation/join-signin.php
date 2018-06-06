@@ -26,7 +26,7 @@
 						$pass = mysqli_real_escape_string($conn, $_POST['password']);
                         
 
-						$query = mysqli_query($conn, "SELECT *FROM `users` WHERE username = '$user' and password = '$pass' and identification = 'student'");
+						$query = mysqli_query($conn, "SELECT * FROM `users` WHERE username = '$user' and password = '$pass' and identification = 'student'");
      		 			$row = mysqli_fetch_array($query,MYSQLI_ASSOC);      
       					$count = mysqli_num_rows($query);
                         

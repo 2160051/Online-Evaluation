@@ -1,45 +1,37 @@
 <?php include('connection.php');?>
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="free-educational-responsive-web-template-webEdu">
-	<meta name="author" content="webThemez.com">
-	<title>Classes</title>
-	<link rel="favicon" href="assets/images/favicon.png">
-	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css"> 
-	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen"> 
-	<link rel="stylesheet" href="assets/css/style.css">
-    <link rel='stylesheet' id='camera-css'  href='assets/css/camera.css' type='text/css' media='all'> 
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	<script src="assets/js/html5shiv.js"></script>
-	<script src="assets/js/respond.min.js"></script>
-	<![endif]-->
+  <meta charset="UTF-8">
+  <title>Online Evaluation (SLU)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+      <link rel="stylesheet" href="css/insideClassroom.css">
 </head>
+
 <body>
-	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse">
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                <a class="navbar-brand" href="index.html"><h1 style="color: dimgray; padding,margin: 0px !important;">Online Evaluation Tool</h1></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right mainNav">
-					<li class="active "><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
-                    <li><a href="#">Add a class</a></li>
-					<li style="color: white; font-size: 18px; margin: auto; padding: 6px; background-color: #3d84e6">Welcome &nbsp; <?php echo $_SESSION['firstname']. " ". $_SESSION['lastname'];?></li>
-				</ul>
-			</div>
-			<!--/.nav-collapse -->
-		</div>
-	</div>
+<div class="offcanvas">
+    <?php
+      
+    ?>
+  <div class="offcanvas__container"><a class="offcanvas__exit-overlay" href="#" data-toggle="offcanvas" data-target="exit"></a>
+    <nav class="navbar bg-info">
+      <div class="container-fluid">
+        <div class="navbar-header navbar-header--double-btn">
+          <button class="navbar-toggle navbar-toggle--left" type="button" data-toggle="offcanvas" data-target="left" aria-expanded="false"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand navbar-brand--center" href="#">Online Evaluation</a>
+        </div>
+        <div class="navbar-offcanvas offcanvas__content offcanvas__content--left">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="teacherpage.php"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
+            <li class=""><a href="joinClass.php"><span class="glyphicon glyphicon-plus"></span>&nbsp;Join a Class</a></li>
+          </ul>
+            <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Welcome <?php echo $_SESSION['firstname']. " ". $_SESSION['lastname'];?></a></li>
+      <li><a href="signout.php"><span class="glyphicon glyphicon-log-out"></span> Log-out</a></li>
+    </ul>
+        </div>
+      </div>
+    </nav>
 	<!-- /.navbar -->
 
   <div class="container">
