@@ -1,0 +1,68 @@
+HTML
+<footer id="foot">
+		<div id="footCenter">
+		<p id="titleFoot">SLU Peer Evaluation</p>
+		<p id="textFoot">This website is an online peer evaluation tool made for SLU.</p>
+		<p id="footContact">Find Us</p>
+		<p id="footAddress">Address: Maryheights Campus, SLU Bakakeng, Baguio City, Philippines</p>
+		<p id="footNum">Contact Us</p>
+		<p id="numberFoot">09657585899 or 452-0289</p>
+		</div>
+</footer>
+
+
+CSS
+#foot{
+	height: 240px;
+	width: 100%;
+	position: relative;
+	left: 0px;
+	background-color: #6D7B8D;
+	overflow: hidden;
+	font-family: 'Quicksand', sans-serif;
+	color: #FFFFFF;
+}
+#titleFoot{
+	font-size: 32px;
+	position: relative;
+	padding-top: 40px;
+}
+#textFoot{
+	font-size: 21px;
+	position: relative;
+}
+#footContact{
+	font-size: 28px;
+	position: relative;
+	padding-top: 20px;
+}
+#footAddress{
+	font-size: 21px;
+	position: relative;
+}
+#footNum{
+	font-size: 28px;
+	position: relative;
+	padding-top: 20px;
+	text-align: right;
+	top: -80px;
+}
+#numberFoot{
+	font-size: 21px;
+	position: relative;
+	text-align: right;
+	top: -80px;
+}
+.navElement{
+	font-size: 21px;
+	text-decoration: none; 
+	color: #FFFFFF;
+}
+.navElement:hover{
+	text-decoration: underline;
+}
+#footCenter{
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+}
